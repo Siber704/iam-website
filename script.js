@@ -58,6 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'Есть.',
         'есть...',
         '.',
+        '',
     ];
 
     const FADE_IN  = 3000;  // ms to fade in
@@ -79,8 +80,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         meditationText.textContent = phrases[index];
-        meditationText.style.transition = `opacity ${FADE_IN}ms ease`;
-        meditationText.style.opacity = '1';
+        const isEmpty = phrases[index] === '';
+        meditationText.style.transition = isEmpty ? 'none' : `opacity ${FADE_IN}ms ease`;
+        meditationText.style.opacity = isEmpty ? '0' : '1';
 
         stepTimer = setTimeout(() => {
             if (stopped) return;
