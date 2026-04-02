@@ -1,0 +1,64 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #1a1a1a;
+    --accent-color: #4a90d9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    padding: 2rem;
+}
+
+h1 {
+    font-size: clamp(3rem, 10vw, 6rem);
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+h1.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animation states */
+.fade-enter {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.fade-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 800ms ease-out, transform 800ms ease-out;
+}
+
+.fade-exit {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-exit-active {
+    opacity: 0;
+    transform: translateY(-30px);
+    transition: opacity 500ms ease-in, transform 500ms ease-in;
+}
