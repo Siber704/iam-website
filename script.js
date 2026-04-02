@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => heading.classList.add('visible'), 100);
 
     const phrases = [
-        'Ты Есть',
+        'Ты Есть.',
         'Тебе ничего не надо делать чтобы Быть.',
         'Ты Уже Есть.',
         'Это Величайший подарок Бога Тебе.',
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'открой глаза и посмотри вокруг.',
         'Здесь больше никого и ничего нет,',
         'кроме Бога.',
-        'Он больше не прячется от Тебя : )',
+        'Он больше не прячется от\u00A0Тебя\u00A0:\u00A0)',
         'Носи эту Тишину, Гармонию и Покой в Себе.',
         'Всегда.',
         'Это и Есть Ты.',
@@ -61,9 +61,9 @@ document.addEventListener('DOMContentLoaded', () => {
         '',
     ];
 
-    const FADE_IN  = 3000;  // ms to fade in
-    const HOLD     = 3500;  // ms to hold visible
-    const FADE_OUT = 2000;  // ms to fade out
+    const FADE_IN  = 4500;  // ms to fade in
+    const HOLD     = 5000;  // ms to hold visible
+    const FADE_OUT = 3000;  // ms to fade out
 
     let paused = false;
     let stopped = false;
